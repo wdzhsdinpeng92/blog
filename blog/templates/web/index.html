@@ -1,0 +1,18 @@
+
+{% extends 'web/base.html' %}
+
+
+{% block title %}
+首页_丁鹏的个人博客 - 艾泽拉斯一大法师的python进阶之路
+{% endblock %}
+
+{% block content %}
+  <main class="r_box">
+    {% for article in articles %}
+    <li><i><a href=""><img src="/media/{{article.titlepic}}"></a></i>
+      <h3><a href="">{{article.title}}</a></h3>
+      <p>{{article.describe}}</p>
+    </li>
+    {% endfor %}
+  </main>
+{% endblock %}
